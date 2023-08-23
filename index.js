@@ -9,7 +9,7 @@ app.use("/js", express.static("node_modules/bootstrap/dist/js"));
 app.use("/js", express.static("node_modules/jquery/dist"));
 
 app.get("/", (req, res) => {
-  res.sendFile("index.html");
+  res.sendFile(path.join(__dirname + "/views/about.html"));
 });
 app.get("/contact", (req, res) => {
   res.send("Contact");
